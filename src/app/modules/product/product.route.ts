@@ -5,7 +5,7 @@ import { productSchemaZodValidation } from "./product.zod.validation";
 
 const router = express.Router();
 
-//  controller function  call router function
+//  controller function  call router path
 router.post(
   "/",
   validate(productSchemaZodValidation),
@@ -22,7 +22,5 @@ router.put(
 );
 
 router.delete("/:productId", ProductControllers.deleteSingleProduct);
-
-// router.get("/searchTerm", ProductControllers.searchSingleProduct);
 
 export const productRoutes = router;

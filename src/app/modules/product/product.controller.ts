@@ -4,7 +4,7 @@ import { CustomError } from "../order/order.interface";
 import { z } from "zod";
 import { productSchemaZodValidation } from "./product.zod.validation";
 
-// product create
+// product create and show database
 const createProduct = async (req: Request, res: Response) => {
   try {
     const product = req.body;
@@ -26,7 +26,7 @@ const createProduct = async (req: Request, res: Response) => {
   }
 };
 
-//get all products
+//get all products from db
 const getAllProducts = async (req: Request, res: Response) => {
   try {
     const searchTerm = req.query.searchTerm as string;
@@ -54,7 +54,7 @@ const getAllProducts = async (req: Request, res: Response) => {
   }
 };
 
-// get single product information
+// get single product information from database and return
 const getSingleProduct = async (req: Request, res: Response) => {
   try {
     const { productId } = req.params;

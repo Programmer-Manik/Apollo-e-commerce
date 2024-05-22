@@ -6,7 +6,7 @@ import { getAllOrdersSchemaValidate, orderSchemaZodValidation } from "./order.zo
 
 const router = express.Router();
 
-// will call controller func
+// will call controller functions 
 router.post(
   "/",
   validate(orderSchemaZodValidation),

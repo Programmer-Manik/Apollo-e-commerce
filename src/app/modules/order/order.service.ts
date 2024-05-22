@@ -7,7 +7,7 @@ const createOrderIntoDB = async (
   price: number,
   quantity: number
 ) => {
-  // Fetch the product to check inventory
+  // Fetch the product to check 
   const findProduct = await productModel.findById(productId);
 
   if (!findProduct) {
@@ -18,7 +18,7 @@ const createOrderIntoDB = async (
     throw new Error("Insufficient quantity available in inventory");
   }
 
-  // Create the order
+  // Create the order and show database 
   const createOrder = new OrderModel({ email, productId, price, quantity });
   await createOrder.save();
 
@@ -30,7 +30,7 @@ const createOrderIntoDB = async (
   return createOrder;
 };
 
-// get all orders
+// get all orders form database
 const getAllOrdersIntoDB = async (orderMail: string) => {
   if (orderMail) {
     const findOrderWithMail = await OrderModel.find({ email: orderMail });

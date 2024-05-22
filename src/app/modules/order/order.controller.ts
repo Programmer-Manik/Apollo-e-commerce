@@ -5,7 +5,7 @@ import { z } from "zod";
 import { getAllOrdersSchemaValidate } from "./order.zod.validation";
 
 
-// create order
+// create order and show database 
 const createOrder = async (req: Request, res: Response) => {
   try {
     const { email, productId, price, quantity } = req.body;
@@ -38,7 +38,7 @@ const createOrder = async (req: Request, res: Response) => {
   }
 };
 
-//get all orders
+//get all orders from database
 const getAllOrders = async (req: Request, res: Response) => {
   try {
     getAllOrdersSchemaValidate.parse(req.query);
