@@ -1,11 +1,11 @@
- Assignment-2
+Apollo-e-commerce
 # Installation
 
 1. Clone the repository:
 
    ```sh
    git clone https://github.com/Programmer-Manik/Apollo-e-commerce.git
-   cd assignment-2
+   cd Apollo-e-commerce
    ```
 
 2. Install dependencies:
